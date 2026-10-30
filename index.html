@@ -53,6 +53,123 @@
       </form>
     </header>
 
+    <main>
+      <div id="storefront">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow">Edition 01 — SS 2026</p>
+            <h1 id="hero-title">MADE FOR<br />NOWHERE.</h1>
+            <a class="explore-button" href="#collection">
+              <span>Explore Collection</span>
+              <img src="/assets/35e86.svg" alt="" />
+            </a>
+          </div>
+        </section>
+
+        <section class="manifesto" aria-labelledby="manifesto-title">
+          <p class="section-index">01 / Manifesto.</p>
+          <div class="manifesto-copy">
+            <h2 id="manifesto-title">We make <span>Sneakers</span> for<br />the undefined.</h2>
+            <p>
+              NULL exists between function and form. Built in limited quantities, every piece is
+              designed to move through the city without asking for attention.
+            </p>
+          </div>
+        </section>
+
+        <section class="collection" id="collection" aria-labelledby="collection-title">
+          <p class="section-index">02 / Collection</p>
+          <h2 id="collection-title">THE COLLECTION</h2>
+          <div class="campaign-banner">
+            <img src="/assets/0978b.png" alt="NULL sneakers special discount campaign" />
+          </div>
+          <div class="filters" role="group" aria-label="Filter products">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="men">Men’s</button>
+            <button class="filter" type="button" data-filter="women">Women’s</button>
+            <button class="filter" type="button" data-filter="kids">Kid’s</button>
+          </div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <p class="empty-state" id="empty-state" hidden>No sneakers match your search.</p>
+        </section>
+
+        <section class="connect" aria-labelledby="connect-title">
+          <div>
+            <p class="section-index">03 / Stay Connected</p>
+            <h2 id="connect-title">ENTER<br />THE<br />VOID.</h2>
+          </div>
+          <address class="contact-card">
+            <p>Contact Us</p>
+            <a href="https://maps.google.com" target="_blank" rel="noreferrer">
+              <img src="/assets/77233.svg" alt="" />
+              Kedung Badak No.16 Bogor
+            </a>
+            <a href="tel:+87254470847">
+              <img src="/assets/80e3b.svg" alt="" />
+              +872 54-470-0847
+            </a>
+            <a href="mailto:null.sneakers@gmail.com">
+              <img src="/assets/368ae.svg" alt="" />
+              null.sneakers@gmail.com
+            </a>
+          </address>
+        </section>
+      </div>
+
+      <section class="product-detail" id="product-detail" aria-labelledby="detail-name" hidden>
+        <div class="detail-visual">
+          <button class="back-button" type="button">← Back to collection</button>
+          <div class="detail-heading">
+            <div>
+              <p class="detail-kicker" id="detail-category"></p>
+              <h1 id="detail-name"></h1>
+              <p id="detail-color"></p>
+            </div>
+            <button class="favorite-button" type="button" aria-label="Add to favorites" aria-pressed="false">
+              <img src="/assets/cf83d.svg" alt="" />
+            </button>
+          </div>
+          <div class="detail-prices">
+            <span id="detail-price"></span>
+            <s id="detail-old-price"></s>
+            <strong id="detail-discount"></strong>
+          </div>
+          <div class="detail-image-wrap">
+            <img id="detail-image" src="" alt="" />
+          </div>
+          <p class="detail-code" id="detail-code"></p>
+        </div>
+        <aside class="detail-panel">
+          <div class="description-heading">
+            <p>Description</p>
+            <span>⌃</span>
+          </div>
+          <p class="detail-description" id="detail-description"></p>
+          <dl class="product-meta">
+            <div><dt>Designed for</dt><dd id="detail-use"></dd></div>
+            <div><dt>Material</dt><dd id="detail-material"></dd></div>
+            <div><dt>Availability</dt><dd id="detail-stock"></dd></div>
+          </dl>
+          <div class="size-section">
+            <div class="size-heading">
+              <p>Select size</p>
+              <button type="button" class="size-guide-button">Size guide</button>
+            </div>
+            <div class="size-grid" id="size-grid"></div>
+            <p class="selection-note" id="selection-note">Choose a size to continue.</p>
+          </div>
+          <div class="purchase-row">
+            <div class="quantity" aria-label="Quantity">
+              <button type="button" data-quantity="minus" aria-label="Decrease quantity">−</button>
+              <output id="quantity">1</output>
+              <button type="button" data-quantity="plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="add-to-cart" type="button">Add to cart</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
     <div class="toast" role="status" aria-live="polite"></div>
     <script type="module" src="/script.js"></script>
   </body>
