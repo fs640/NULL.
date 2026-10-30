@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NULL. sneakers — limited streetwear footwear made for nowhere."
+    />
+    <title>NULL. — Made for Nowhere</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <a class="logo" href="#home" aria-label="NULL home">NULL<span>.</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#collection">New Arrival</a>
+        <button type="button" data-filter-link="men">Men’s</button>
+        <button type="button" data-filter-link="women">Women’s</button>
+        <button type="button" data-filter-link="kids">Kid’s</button>
+      </nav>
+      <div class="nav-actions">
+        <button
+          class="icon-button search-button"
+          type="button"
+          aria-label="Search products"
+          aria-expanded="false"
+          aria-controls="product-search-panel"
+        >
+          <img src="/assets/5988b.svg" alt="" />
+        </button>
+        <button class="icon-button cart-button" type="button" aria-label="Open cart">
+          <img src="/assets/ba2f0.svg" alt="" />
+          <span class="cart-count" aria-label="0 items in cart">0</span>
+        </button>
+        <button class="profile-button" type="button" aria-label="Account">
+          <span class="profile-icon"><img src="/assets/76e1e.svg" alt="" /></span>
+        </button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          Menu
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="#collection">New Arrival</a>
+        <button type="button" data-filter-link="men">Men’s</button>
+        <button type="button" data-filter-link="women">Women’s</button>
+        <button type="button" data-filter-link="kids">Kid’s</button>
+      </nav>
+      <form class="search-panel" id="product-search-panel" role="search">
+        <label for="product-search">Find your next pair</label>
+        <input id="product-search" type="search" placeholder="Search NULL. sneakers" autocomplete="off" />
+        <button type="button" class="search-close" aria-label="Close search">Close</button>
+      </form>
+    </header>
+
+    <main>
+      <div id="storefront">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow">Edition 01 — SS 2026</p>
+            <h1 id="hero-title">MADE FOR<br />NOWHERE.</h1>
+            <a class="explore-button" href="#collection">
+              <span>Explore Collection</span>
+              <img src="/assets/35e86.svg" alt="" />
+            </a>
+          </div>
+        </section>
+
+        <section class="manifesto" aria-labelledby="manifesto-title">
+          <p class="section-index">01 / Manifesto.</p>
+          <div class="manifesto-copy">
+            <h2 id="manifesto-title">We make <span>Sneakers</span> for<br />the undefined.</h2>
+            <p>
+              NULL exists between function and form. Built in limited quantities, every piece is
+              designed to move through the city without asking for attention.
+            </p>
+          </div>
+        </section>
+
+        <section class="collection" id="collection" aria-labelledby="collection-title">
+          <p class="section-index">02 / Collection</p>
+          <h2 id="collection-title">THE COLLECTION</h2>
+          <div class="campaign-banner">
+            <img src="/assets/0978b.png" alt="NULL sneakers special discount campaign" />
+          </div>
+          <div class="filters" role="group" aria-label="Filter products">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="men">Men’s</button>
+            <button class="filter" type="button" data-filter="women">Women’s</button>
+            <button class="filter" type="button" data-filter="kids">Kid’s</button>
+          </div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <p class="empty-state" id="empty-state" hidden>No sneakers match your search.</p>
+        </section>
+
+        <section class="connect" aria-labelledby="connect-title">
+          <div>
+            <p class="section-index">03 / Stay Connected</p>
+            <h2 id="connect-title">ENTER<br />THE<br />VOID.</h2>
+          </div>
+          <address class="contact-card">
+            <p>Contact Us</p>
+            <a href="https://maps.google.com" target="_blank" rel="noreferrer">
+              <img src="/assets/77233.svg" alt="" />
+              Kedung Badak No.16 Bogor
+            </a>
+            <a href="tel:+87254470847">
+              <img src="/assets/80e3b.svg" alt="" />
+              +872 54-470-0847
+            </a>
+            <a href="mailto:null.sneakers@gmail.com">
+              <img src="/assets/368ae.svg" alt="" />
+              null.sneakers@gmail.com
+            </a>
+          </address>
+        </section>
+      </div>
+
+      <section class="product-detail" id="product-detail" aria-labelledby="detail-name" hidden>
+        <div class="detail-visual">
+          <button class="back-button" type="button">← Back to collection</button>
+          <div class="detail-heading">
+            <div>
+              <p class="detail-kicker" id="detail-category"></p>
+              <h1 id="detail-name"></h1>
+              <p id="detail-color"></p>
+            </div>
+            <button class="favorite-button" type="button" aria-label="Add to favorites" aria-pressed="false">
+              <img src="/assets/cf83d.svg" alt="" />
+            </button>
+          </div>
+          <div class="detail-prices">
+            <span id="detail-price"></span>
+            <s id="detail-old-price"></s>
+            <strong id="detail-discount"></strong>
+          </div>
+          <div class="detail-image-wrap">
+            <img id="detail-image" src="" alt="" />
+          </div>
+          <p class="detail-code" id="detail-code"></p>
+        </div>
+        <aside class="detail-panel">
+          <div class="description-heading">
+            <p>Description</p>
+            <span>⌃</span>
+          </div>
+          <p class="detail-description" id="detail-description"></p>
+          <dl class="product-meta">
+            <div><dt>Designed for</dt><dd id="detail-use"></dd></div>
+            <div><dt>Material</dt><dd id="detail-material"></dd></div>
+            <div><dt>Availability</dt><dd id="detail-stock"></dd></div>
+          </dl>
+          <div class="size-section">
+            <div class="size-heading">
+              <p>Select size</p>
+              <button type="button" class="size-guide-button">Size guide</button>
+            </div>
+            <div class="size-grid" id="size-grid"></div>
+            <p class="selection-note" id="selection-note">Choose a size to continue.</p>
+          </div>
+          <div class="purchase-row">
+            <div class="quantity" aria-label="Quantity">
+              <button type="button" data-quantity="minus" aria-label="Decrease quantity">−</button>
+              <output id="quantity">1</output>
+              <button type="button" data-quantity="plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="add-to-cart" type="button">Add to cart</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="#home">NULL<span>.</span></a>
+        <p>Made for nowhere. Built for every day.</p>
+        <nav class="social-links" aria-label="Social media">
+          <a
+            href="https://www.facebook.com/share/1EpdXhrEtA/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="NULL. on Facebook"
+          >
+            <img src="/assets/d7fe7.svg" alt="" />
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/chatgpt/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="NULL. on LinkedIn"
+          >
+            <img src="/assets/0927a.svg" alt="" />
+          </a>
+          <a
+            href="https://youtu.be/Shm39XHEiuw?si=CjpG1W9sVBPTxG3J"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="NULL. on YouTube"
+          >
+            <img src="/assets/a3ef3.svg" alt="" />
+          </a>
+          <a
+            href="https://www.instagram.com/charliekirk1776?obrf=MWdqb2dudWtiNzBxOA=="
+            target="_blank"
+            rel="noreferrer"
+            aria-label="NULL. on Instagram"
+          >
+            <img src="/assets/5a0ff.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+      <div>
+        <h2>ABOUT</h2>
+        <a href="#collection">Men’s Sneakers</a>
+        <a href="#collection">Women’s Sneakers</a>
+        <a href="#collection">Kid’s Sneakers</a>
+      </div>
+      <div>
+        <h2>CONTACT</h2>
+        <a href="mailto:null.sneakers@gmail.com">Email us</a>
+        <a href="tel:+87254470847">Call us</a>
+        <a href="#home">Bogor, Indonesia</a>
+      </div>
+      <div>
+        <h2>HOME</h2>
+        <a href="#collection">New Arrival</a>
+        <a href="#collection">The Collection</a>
+        <a href="#home">Manifesto</a>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
